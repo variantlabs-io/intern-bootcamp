@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col__6__1">
+                <img class="side_img" src="./img/twitter.png" alt="">
+            </div>
+            <div class="col__6__2">
+                <img class="logo"
+                    src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png"
+                    width="200" alt="twitter logo vector png clipart" />
+                <h1 class="main__text">Happaning Now</h1>
+                <h2 class="secondary__text">Join Twitter Today</h2>
+                <div class="btn_group">
+                    <button class="btn" >Sign up with google</button>
+                    <button class="btn font__bold">Sign up with Apple</button>
+                    <p class="text__center">or</p>
+                    <button class="btn sign_up_with_phone" id="SignUp">Sign up with Phone</button>
+                </div>
+                <div class="t_and_c">
+                    By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.
+                </div>
+
+                <div class="btn_group">
+                    <h3>Already have an account ?</h3>
+                    <button class="btn">Sign in</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="SignUpModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="text__center">
+                <img class="modal_logo"
+                    src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png"
+                    width="200" alt="twitter logo vector png clipart" />
+            </div>
+            <form class="form_group">
+                <label for="Name">Name</label>
+                <input class="form_control" type="text" placeholder="name">
+                <label for="Email">Email</label>
+                <input class="form_control" type="email" placeholder="email">
+                <label for="Password">Password</label>
+                <input class="form_control" type="password" placeholder="password">
+                <label for="Phone">Phone No</label>
+                <input class="form_control" type="text" placeholder="Phone">
+                <label for="Phone">Date of Birth</label>
+                <input class="form_control" type="date">
+                <button class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
