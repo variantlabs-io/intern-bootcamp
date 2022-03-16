@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*Width won't increase */
+
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    
+}
+
+.container{
+   
+    width: 100vw;
+    height: 100vh;
+    display: flex; /*Represents that this is a flex container from now on*/
+    flex-wrap: wrap;/*gets ajusted to shrinking*/
+
+}
+
+.image{
+    height:95%;
+    background: url('https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png') center center/cover;
+    flex: 0 1 54vw;
+    position: relative;
+    
+
+}
+
+.content{
+    display: flex;
+    flex: 0 0 46vw;
+    
+    flex-direction: column;
+    align-item: flex-start;
+    justify-content: space-evenly;
+    padding: 2rem;
+
+}
+
+.big-logo{
+    width: 400px;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    fill: #fff;
+
+}
+
+.small-logo{
+    width:4.5rem;
+    fill:#1da1f2;
+
+}
+
+
+
+h1{
+    color:#0f1419;
+    font-weight:900; 
+    font-size: 4.3rem;
+}
+
+h3 {
+    color:#0f1419;
+    font-weight:900; 
+    font-size: 2.3rem;
+  }
+
+.buttn{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    width: 25rem; 
+    height: 3.5rem;
+    border-radius: 2rem;
+    font-size: 90%;
+    text-decoration: none;
+    font-weight: 700;
+  
+}
+
+.buttn-signup{
+    background: #1da1f2;
+    color: #fff;
+    transition: background 0.5s ease;
+    margin-bottom: 20px; /*for gap between signup and login buttons*/
+}
+
+.buttn-signup:hover{
+    background: #1f94dd;
+}
+
+.buttn-login{
+    
+    border: 1px solid #1da1f2;
+    transition: background 0.5s ease;
+    color: #000000;
+
+}
+
+.buttn-login:hover{
+    background: #b8cad6;
+}
+
+.footer{
+    padding: 1rem 2%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer  a,
+.footer  div{
+    text-decoration: none;
+    font-size: 13px;
+    color:#536471;
+    margin: .3rem .5rem; 
+    text-transform: capitalize;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.7s ease; 
+
+}
+
+.footer  a:hover{
+    border-bottom: 1px solid #536471;
+
+}
+
+
+
+
+
