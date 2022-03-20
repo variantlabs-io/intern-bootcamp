@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/variantlabs-io/intern-bootcamp#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "bcrypt": "^5.0.1",
+    "export": "^0.1.337",
+    "express": "^4.17.3",
+    "mongo": "^0.1.0",
+    "mongoose": "^6.2.7"
   }
 }
