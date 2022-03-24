@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    
+}
+
+.container{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+.navigate{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    
+    
+}
+
+#mid-head{
+    position: fixed;
+}
+
+.poster{
+
+    border-top:40px;
+    border-radius: 20px;
+    width:60%;
+}
+
+header{
+    position:fixed;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    width:100%;
+    
+}
+
+.left-content{
+    display:flex;
+    
+    flex:0 0 26vw;
+    flex-direction: column;
+    border-right: 16px;
+    border-color: black;
+   
+
+}
+
+.middle-content{
+    margin:0;
+    padding:0; 
+    display:flex;
+    flex:0 0 40vw;
+    flex-direction: column;
+
+}
+
+.mid-home{
+    position: fixed;
+    align-content: left;
+    align-items: left;
+}
+
+.right-content{
+    display:flex;
+    flex:0 0 20vw;
+    flex-direction:column;
+    border-left:2px;
+    border-color: black;;
+}
+
+.image{
+    margin-top: 10px;
+    margin-left: 140px;
+
+
+}
+
+#mid:hover,#mid:active{ 
+    background: whitesmoke;
+}
+
+button{
+   
+        display: block;
+        background: white;
+        color:black;
+        
+        margin-left: 145px;;
+        
+        margin-top: 20px;
+        font-size: large;
+        border:0;
+        text-align: left;;
+        height:40px;
+        border-radius: 20px;
+        width: 150px;;
+}
+a{
+    text-decoration: none;
+}
+.navigate-home{
+    width:80px;
+    padding-left: 16px;
+}
+
+.navigate-explore{
+    width:100px;
+    padding-left: 16px;
+}
+
+.navigate-notifications{
+    width:140px;
+    padding-left: 16px;
+}
+
+.navigate-messages{
+    width:120px;
+    padding-left: 16px;;
+}
+
+.navigate-bookmarks{
+    width:130px;
+    padding-left: 16px;;
+}
+
+.navigate-lists{
+    width:80px;
+    padding-left: 16px;;
+}
+
+.navigate-profile{
+    width:90px;
+    padding-left: 16px;;
+}
+
+.navigate-more{
+    width:80px;
+    padding-left: 16px;;
+}
+
+.tweet{
+    background: rgb(31, 122, 206);
+    color:white;
+    padding:16px;
+    border-radius: 40px;;
+    height:55px;
+    width:200px;
+    text-align: center;
+}
+
+button.tweet:hover{
+    background:rgb(49, 105, 189);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+button:hover ,button:active{
+    background:rgb(233, 227, 227);
+    font-weight: bold;
+    text-decoration: none;
+}
+
