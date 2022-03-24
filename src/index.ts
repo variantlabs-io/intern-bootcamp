@@ -3,7 +3,6 @@ import { getRoutes } from "./routes";
 
 const app = express();
 
-// @ts-ignore
 app.use("/", getRoutes());
 
 const PORT: number = 3000;
