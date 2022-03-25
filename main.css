@@ -101,49 +101,14 @@ button{
         height:40px;
         border-radius: 20px;
         width: 150px;;
+        padding-left: 16px;
+        width: fit-content;
+        padding:0 16px;
 }
 a{
     text-decoration: none;
 }
-.navigate-home{
-    width:80px;
-    padding-left: 16px;
-}
 
-.navigate-explore{
-    width:100px;
-    padding-left: 16px;
-}
-
-.navigate-notifications{
-    width:140px;
-    padding-left: 16px;
-}
-
-.navigate-messages{
-    width:120px;
-    padding-left: 16px;;
-}
-
-.navigate-bookmarks{
-    width:130px;
-    padding-left: 16px;;
-}
-
-.navigate-lists{
-    width:80px;
-    padding-left: 16px;;
-}
-
-.navigate-profile{
-    width:90px;
-    padding-left: 16px;;
-}
-
-.navigate-more{
-    width:80px;
-    padding-left: 16px;;
-}
 
 .tweet{
     background: rgb(31, 122, 206);
