@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./media/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <section>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Signup</h2>
+                <form action="/signup" method="POST">
+                    <div class="inputBx">
+                        <span>Name</span>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="inputBx">
+                        <span>Gender</span>
+                          <select name="gender" id="signupRole">
+                            <option value="none" selected disabled>Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other"><Obj>Other</Obj></option>
+                          </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>Email</span>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email"required>
+                    </div>
+                    <div class="inputBx">
+                        <span>Username</span>
+                        <input type="text" id="username" name="username" placeholder="Enter An Username" required>
+                    </div>
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="password" name="password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="inputBx">
+                        <button type="submit" onclick="Validate()">Sign Up</button>
+                    </div>
+                    <div class="inputBx">
+                        <p>Already have an account? <a href="login.html">Log In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/validation.js"></script>
+</body>
+</html>
