@@ -79,7 +79,7 @@ app.post("/login", async (req, res) => {
     for (let i = 0; i < allData.length; i++){
         if (allData[i].username == username && allData[i].password == pass) {
             console.log("User found!!");
-            return res.redirect('signup.html');
+            return res.redirect('home.html');
         }
     }
     console.log("User not found");
