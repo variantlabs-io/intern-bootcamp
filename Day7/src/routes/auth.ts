@@ -11,13 +11,11 @@ let router :IRouter = Router()
 router.post("/login" , (req:Request  , res : Response)=>{
     try {
         let {username , password} = req.body
-        userData.map((user)=>{
-            if(user.username === username && user.password === password){
-                return res.status(200).json(user);
-            }
-        })
-        return res.status(401).json({msg : "Invalid Credentials"})
-
+        let user = userData.filter((user)=>user.username === username && user.password === password)
+        if(user.length === 0){
+            return res.status(404).json({msg : "Invalid Credentials"})
+        }
+        return res.status(200).json(user);
     } catch (error:any) {  //doubt
         console.log(error.message)
     }
@@ -35,9 +33,10 @@ router.post("/signup" ,  (req :Request , res: Response)=>{
         // check user if it already exists
         let existingUser = userData.find((user)=>user.email === email)
         if(existingUser){
-            return res.status(404).json({msg: "User Already exists"})
+            return res.status(409).json({msg: "User Already exists"})
         }
-        let newUser: Partial<User> = {}
+
+        let newUser: User = {}
         //create new User
         newUser.name = name
         newUser.username = username
