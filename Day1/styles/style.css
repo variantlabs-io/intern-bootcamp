@@ -2,8 +2,8 @@
   padding: 0;
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
 }
 .font__bold {
   font-weight: 700;
