@@ -1,0 +1,28 @@
+.App {
+  
+ display:flex;
+}
+
+.left-content{
+  display:flex;
+  flex-basis:30vw;
+  flex-direction: column;
+  border-right: 16px;
+  border-color: black;
+}
+
+.mid-content{
+  margin:0;
+  padding:0; 
+  display:flex;
+  flex:0 0 40vw;
+  flex-direction: column;
+}
+
+.right-content{
+  display:flex;
+  flex:0 0 30vw;
+  flex-direction:column;
+  
+ 
+}
