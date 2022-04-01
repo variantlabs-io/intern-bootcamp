@@ -1,16 +1,71 @@
 import React, { useEffect } from 'react';
+import UserContext from '../context/UserContext';
 import './MidContent.scss'
-import {Tweet} from "../App";
-import TweetDisplay from './TweetDisplay'
+
+interface Tweet{
+    id:number,
+    message:string;
+  
+  }
+
+  const TweetComponent=(props:any)=>{
+
+    const[tweet,setTweet]=React.useState("");  
+
+    function handleOnClick(tweet:Tweet){
+        // console.log("Delete",e)
+        props.setTweets(props.tweets.filter((t: { id: number; })=>t.id!==tweet.id))
+
+       
+
+    }
+        
+
+    
+    return(<div>        
+        <h2>What's Happening</h2>
+        <p>What you wanna Tweet about?</p>
+        
+        <label>What's in your Mind</label><br/>
+        <input type="text" value={tweet} onChange={(e) => setTweet(e.target.value) } />
+            
+        <button className='posttweet'     onClick={()=>{
+            props.handleSubmit(tweet);
+        }} >Tweet</button>
+       
+        <div>   
+            {props.tweets.map((tweet:Tweet) =>(
+              <div key={tweet.message}>
+                <div>{props.user} tweeted</div>
+                <br/>
+                <div >{tweet.message}</div>
+                <br></br>
+                <button  onClick={()=>{
+                    handleOnClick(tweet)
+                
+                 
+                }}>Delete</button>
+                <hr/>
+             </div>
+        ))
+        }
+        </div>
+    
+ 
+            
+    </div>)
+  };
 
 
 
 function MiddleContent(props:any){
 
-    const[tweet,setTweet]=React.useState("");
-    const [tweets, setTweets]= React.useState<Tweet []>([]);
+    const user=React.useContext(UserContext);
+    const[tweet,setTweet]=React.useState("");                              //Text Input tweet
+    const [tweets, setTweets]= React.useState<Tweet []>([]);                //collection of all the tweets
     const[isTweetDisabled, setIsTweetDisabled]=React.useState(true);
-    
+   
+
     const HomeComponent = () => (
         <div><h3>Home</h3>
             <p>          
@@ -105,35 +160,13 @@ function MiddleContent(props:any){
 
     );
 
-    const TweetComponent=()=>(
-        <div>        
-            <h2>What's Happening</h2>
-            <p>What you wanna Tweet about?</p>
-            <form>
-            <label>What's in your Mind</label><br/>
-            <input type="text" value={tweet} onChange={(e) => setTweet(e.target.value) } />
-                
-            <button className='posttweet'  type="submit" disabled={isTweetDisabled}  onClick={handleSubmit} >Tweet</button>
-            </form>
-            <div>   
-                {tweets.map((tweet:Tweet) =>(
-                  <div>
-                    <div key={tweet.message}>{tweet.message}</div>
-                 </div>
-            ))
-            }
-            </div>
+    
+
+    function handleSubmit(tweet: string){
         
-     
-                
-        </div>
-    );
-
-
-    function handleSubmit(event: React.FormEvent){
-        event.preventDefault();
         setTweets([...tweets,
             {
+                id:tweets.length+1,
                 message:tweet
             }]
             );
@@ -177,7 +210,7 @@ function MiddleContent(props:any){
             case 'more-button':
                 return <MoreComponent/>
             case 'tweet-button':
-                return <TweetComponent/>
+                return <TweetComponent user={user} setTweets={setTweets} tweets={tweets} isTweetDisabled={isTweetDisabled} handleSubmit={handleSubmit}/>
 
             default:
                 return <HomeComponent/>

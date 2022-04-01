@@ -5,7 +5,7 @@ function LeftContent(props:any){
 
     function handleClick(e:any){
 
-      //  console.log(e.target.id )
+     //  console.log(e.target )
         props.getId(e.target.id);
 
     }
