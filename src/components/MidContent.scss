@@ -1,0 +1,18 @@
+.poster{
+
+    border-top:40px;
+    border-radius: 20px;
+    width:60%;
+}
+
+.posttweet{
+
+    background-color: rgb(81, 151, 207);
+    &:hover,&:active
+    {
+        background-color: rgb(81, 151, 207);
+        font-weight:normal;
+        text-decoration: none;
+    }
+    color:black;
+}
